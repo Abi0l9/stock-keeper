@@ -1,46 +1,47 @@
-# Getting Started with Create React App
+# Stock Keeper
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+An inventory-management frontend built with **React, TypeScript, Redux Toolkit, and Material UI**. The project demonstrates a small business workflow for reviewing stock and navigating sales and purchase records.
 
-## Available Scripts
+## What is implemented
 
-In the project directory, you can run:
+- Stock dashboard and individual stock views
+- Sales and purchases screens
+- Client-side routing with React Router
+- Application state handled with Redux Toolkit
+- HTTP requests with Axios
+- A local JSON Server API with sample data
 
-### `npm start`
+## Technology
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+React 18 · TypeScript · Redux Toolkit · React Router · Material UI · Axios · JSON Server
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Run locally
 
-### `npm test`
+Prerequisite: Node.js and npm.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```bash
+git clone https://github.com/Abi0l9/stock-keeper.git
+cd stock-keeper
+npm install
+npm start
+```
 
-### `npm run build`
+The `npm start` script runs the React app and JSON Server together:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- App: http://localhost:3000
+- Mock API: http://localhost:3001
+- Sample inventory: `db.json`
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+The application fetches stock data from `http://localhost:3001/store`.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Code orientation
 
-### `npm run eject`
+- `src/components/`: dashboard, navigation, stock, and transaction UI
+- `src/reducers/`: Redux state and asynchronous actions
+- `src/services/`: HTTP access to stock data
+- `src/App.tsx`: application routes
+- `db.json`: local demonstration data
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## Scope
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+This repository is a **frontend portfolio project using a mock API**, not a production inventory or accounting service. It illustrates component composition, typed frontend code, state management, routing, and API integration.
